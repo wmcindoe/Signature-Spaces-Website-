@@ -14,25 +14,35 @@ if (nav) {
 // ---- Mobile burger / drawer ----
 const burger = document.getElementById('nav-burger');
 const drawer = document.getElementById('nav-drawer');
+const scrim = document.getElementById('nav-scrim');
 if (burger && drawer) {
+  const closeDrawer = () => {
+    burger.classList.remove('open');
+    drawer.classList.remove('open');
+    if (scrim) scrim.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  };
   burger.addEventListener('click', () => {
     const open = burger.classList.toggle('open');
     drawer.classList.toggle('open', open);
+    if (scrim) scrim.classList.toggle('open', open);
     burger.setAttribute('aria-expanded', open);
     document.body.style.overflow = open ? 'hidden' : '';
   });
-  drawer.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      burger.classList.remove('open');
-      drawer.classList.remove('open');
-      burger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    });
-  });
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+  if (scrim) scrim.addEventListener('click', closeDrawer);
 }
 
 // ---- Scroll reveal ----
-if ('IntersectionObserver' in window) {
+// .sr elements are visible by default (see CSS). We only arm the hidden
+// pre-reveal state once we know JS, IntersectionObserver and motion are all
+// available, so a slow network or script error never leaves content stuck
+// invisible.
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if ('IntersectionObserver' in window && !prefersReducedMotion) {
+  const revealEls = document.querySelectorAll('.sr');
+  revealEls.forEach(el => el.classList.add('sr-armed'));
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -40,8 +50,8 @@ if ('IntersectionObserver' in window) {
         io.unobserve(e.target);
       }
     });
-  }, { threshold: 0.07 });
-  document.querySelectorAll('.sr').forEach(el => io.observe(el));
+  }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+  revealEls.forEach(el => io.observe(el));
 }
 
 // ---- Contact form (front-end only — wire to Formspree/backend) ----

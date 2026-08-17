@@ -36,6 +36,7 @@
     <a href="team.html">Team</a>
     <a href="contact.html" class="drawer-cta">Get a Quote &rarr;</a>
   </div>
+  <div class="nav-scrim" id="nav-scrim"></div>
 
   <!-- HERO -->
   <section class="hero">
@@ -97,14 +98,14 @@
       <div class="intro-grid sr">
         <div class="intro-cell">
           <p class="label">Who We Are</p>
-          <h2 style="margin-top:0.5rem;font-size:clamp(1.75rem,3.5vw,2.75rem)">An Independent Agency Working For You</h2>
-          <blockquote class="big-quote">"We do the hard work,<br/>so you don't have to."</blockquote>
+          <h2 style="margin-top:0.6rem;font-size:clamp(1.75rem,3.2vw,2.5rem)">An Independent Agency Working For You</h2>
+          <blockquote class="big-quote">&ldquo;We do the hard work,<br/>so you don't have to.&rdquo;</blockquote>
           <p>Unlike agencies tied to a single venue portfolio, Signature Spaces explores every option. We build a completely bespoke package around your goals, audience and budget &mdash; with no vested interest in one venue over another.</p>
           <p>From the initial brief to the day your stand opens, we handle everything: sourcing the space, helping create your kiosk or trailer, licensing, and ongoing venue management.</p>
           <a href="services.html" class="btn btn-ink" style="margin-top:0.75rem">Explore Services <span class="arrow">&rarr;</span></a>
         </div>
-        <div class="intro-cell" style="padding:0;overflow:hidden;">
-          <div class="ph" style="height:100%;min-height:380px;" data-label="Replace with real image">
+        <div class="intro-cell">
+          <div class="ph">
             <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80&fit=crop" alt="Brand activation at a shopping centre" loading="lazy" />
           </div>
         </div>
@@ -115,56 +116,62 @@
   <!-- SERVICES OVERVIEW -->
   <section class="section section--paper">
     <div class="container">
-      <div class="sr" style="margin-bottom:2.5rem;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem">
+      <div class="section-head sr">
         <div>
           <p class="label">What We Do</p>
-          <h2 style="margin-top:0.4rem">Our Services</h2>
+          <h2>Our Services</h2>
         </div>
         <a href="services.html" class="btn btn-outline">View All <span class="arrow">&rarr;</span></a>
       </div>
-      <div class="services-grid sr">
-        <div class="service-tile">
-          <div class="service-tile-num">01</div>
-          <p class="label">Supermarkets</p>
-          <h3>Asda &amp; Supermarket Space</h3>
-          <p>Asda partner with 18M+ weekly shoppers. Car promotions, food and product sampling, and digital marketing support.</p>
-          <a href="services.html#supermarkets" class="tile-link">Learn more <span>&rarr;</span></a>
-        </div>
-        <div class="service-tile">
-          <div class="service-tile-num">02</div>
-          <p class="label">Shopping Centres</p>
-          <h3>Kiosk &amp; Promotional Hire</h3>
-          <p>Kiosk hire and creative promotional formats across shopping centres UK-wide. Venue management for landlords.</p>
-          <a href="services.html#shopping-centres" class="tile-link">Learn more <span>&rarr;</span></a>
-        </div>
-        <div class="service-tile">
-          <div class="service-tile-num">03</div>
-          <p class="label">Train Stations</p>
-          <h3>600+ Stations Nationwide</h3>
-          <p>High footfall, long dwell times, concourse and outdoor space at 600+ stations from major hubs to local stops.</p>
-          <a href="services.html#train-stations" class="tile-link">Learn more <span>&rarr;</span></a>
-        </div>
-        <div class="service-tile">
-          <div class="service-tile-num">04</div>
-          <p class="label">Travel Hubs</p>
-          <h3>Airports &amp; Stations</h3>
-          <p>A captive, ready audience at airports and travel hubs &mdash; engaged, present, and receptive to your brand.</p>
-          <a href="services.html#travel-hubs" class="tile-link">Learn more <span>&rarr;</span></a>
-        </div>
-        <div class="service-tile">
-          <div class="service-tile-num">05</div>
-          <p class="label">Brand Experience</p>
-          <h3>Experiential Marketing</h3>
-          <p>Dedicated sourcing for brand activations and experiential campaigns &mdash; city centres, centres, exhibitions.</p>
-          <a href="services.html#brand-experience" class="tile-link">Learn more <span>&rarr;</span></a>
-        </div>
-        <div class="service-tile">
-          <div class="service-tile-num">06</div>
-          <p class="label">Venue Management</p>
-          <h3>For Landlords &amp; Asset Managers</h3>
-          <p>Diary management, licensing, H&amp;S paperwork, credit control, and active marketing to maximise your space revenue.</p>
-          <a href="services.html#venue-management" class="tile-link">Learn more <span>&rarr;</span></a>
-        </div>
+      <div class="service-list sr">
+        <a href="services.html#supermarkets" class="service-row">
+          <span class="service-row-num">01</span>
+          <span class="service-row-body">
+            <h3>Asda &amp; Supermarket Space</h3>
+            <p>Asda partner with 18M+ weekly shoppers. Car promotions, food and product sampling, and digital marketing support.</p>
+          </span>
+          <span class="service-row-arrow">&rarr;</span>
+        </a>
+        <a href="services.html#shopping-centres" class="service-row">
+          <span class="service-row-num">02</span>
+          <span class="service-row-body">
+            <h3>Kiosk &amp; Promotional Hire</h3>
+            <p>Kiosk hire and creative promotional formats across shopping centres UK-wide. Venue management for landlords.</p>
+          </span>
+          <span class="service-row-arrow">&rarr;</span>
+        </a>
+        <a href="services.html#train-stations" class="service-row">
+          <span class="service-row-num">03</span>
+          <span class="service-row-body">
+            <h3>600+ Stations Nationwide</h3>
+            <p>High footfall, long dwell times, concourse and outdoor space at 600+ stations from major hubs to local stops.</p>
+          </span>
+          <span class="service-row-arrow">&rarr;</span>
+        </a>
+        <a href="services.html#travel-hubs" class="service-row">
+          <span class="service-row-num">04</span>
+          <span class="service-row-body">
+            <h3>Airports &amp; Travel Hubs</h3>
+            <p>A captive, ready audience at airports and travel hubs &mdash; engaged, present, and receptive to your brand.</p>
+          </span>
+          <span class="service-row-arrow">&rarr;</span>
+        </a>
+        <a href="services.html#brand-experience" class="service-row">
+          <span class="service-row-num">05</span>
+          <span class="service-row-body">
+            <h3>Experiential Marketing</h3>
+            <p>Dedicated sourcing for brand activations and experiential campaigns &mdash; city centres, shopping centres, exhibitions.</p>
+          </span>
+          <span class="service-row-arrow">&rarr;</span>
+        </a>
+        <a href="services.html#venue-management" class="service-row">
+          <span class="service-row-num">06</span>
+          <span class="service-row-body">
+            <h3>Venue Management, For Landlords</h3>
+            <p>Diary management, licensing, H&amp;S paperwork, credit control, and active marketing to maximise your space revenue.</p>
+          </span>
+          <span class="service-row-arrow">&rarr;</span>
+        </a>
       </div>
     </div>
   </section>
@@ -234,7 +241,7 @@
       </div>
       <div class="venue-grid sr">
         <div class="venue-card">
-          <div class="ph venue-card-img" data-label="Supermarket">
+          <div class="ph venue-card-img">
             <img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=600&q=80&fit=crop" alt="Supermarket aisle" loading="lazy" />
           </div>
           <div class="venue-card-body">
@@ -244,7 +251,7 @@
           </div>
         </div>
         <div class="venue-card">
-          <div class="ph venue-card-img" data-label="Shopping Centre">
+          <div class="ph venue-card-img">
             <img src="https://images.unsplash.com/photo-1519566335946-e6f65f0f4fdf?w=600&q=80&fit=crop" alt="Shopping centre interior" loading="lazy" />
           </div>
           <div class="venue-card-body">
@@ -254,7 +261,7 @@
           </div>
         </div>
         <div class="venue-card">
-          <div class="ph venue-card-img" data-label="Train Station">
+          <div class="ph venue-card-img">
             <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=80&fit=crop" alt="Train station concourse" loading="lazy" />
           </div>
           <div class="venue-card-body">
@@ -264,7 +271,7 @@
           </div>
         </div>
         <div class="venue-card">
-          <div class="ph venue-card-img" data-label="City Centre">
+          <div class="ph venue-card-img">
             <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80&fit=crop" alt="City centre street" loading="lazy" />
           </div>
           <div class="venue-card-body">
@@ -293,11 +300,11 @@
   </div>
 
   <!-- TESTIMONIALS -->
-  <section class="section section--ink">
+  <section class="section">
     <div class="container">
       <div class="sr" style="margin-bottom:2.5rem">
-        <p class="label label--lt">What Clients Say</p>
-        <h2 style="margin-top:0.4rem;color:var(--white)">In Their Own Words</h2>
+        <p class="label">What Clients Say</p>
+        <h2 style="margin-top:0.6rem">In Their Own Words</h2>
       </div>
       <div class="testimonial-grid sr">
         <div class="testimonial-card">
