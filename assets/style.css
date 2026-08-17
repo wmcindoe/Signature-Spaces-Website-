@@ -5,13 +5,13 @@
 
 /* ---- Tokens ---- */
 :root {
-  --accent:     #ff4d2e;
-  --accent-dk:  #d93a1e;
-  --ink:        #111111;
-  --ink-mid:    #2a2a2a;
-  --ink-soft:   #555555;
-  --paper:      #f5f0e8;
-  --paper-dk:   #ede7d8;
+  --accent:     #4fb8ae;
+  --accent-dk:  #3a9891;
+  --ink:        #0f1c33;
+  --ink-mid:    #1a2c4a;
+  --ink-soft:   #58698a;
+  --paper:      #f3f6f7;
+  --paper-dk:   #e6edee;
   --white:      #ffffff;
   --border:     2px solid var(--ink);
   --border-lt:  2px solid rgba(255,255,255,0.18);
